@@ -1,0 +1,8 @@
+@value makerGreen from '/src/common/colors.css';
+
+.header {
+  background-color: makerGreen;
+  color: rgb(238, 236, 236);
+  padding: 1rem 0;
+  margin: 0;
+}
