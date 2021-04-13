@@ -1,0 +1,31 @@
+@value makerGreen, makerWhite, makerLightPink from '/src/common/colors.css';
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30em;
+  text-align: center;
+  background-color: makerWhite;
+}
+
+.login {
+  width: 100%;
+}
+
+.button {
+  width: 95%;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5em;
+  padding: 0.3em 0;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid makerGreen;
+  background: transparent;
+  transition: all 250ms ease;
+}
+
+.button:hover {
+  background-color: makerLightPink;
+}

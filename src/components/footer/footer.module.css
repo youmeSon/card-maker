@@ -1,8 +1,11 @@
-@value makerGreen from '/src/common/colors.css';
+@value makerGreen, makerWhite from '../../common/colors.css';
 
-.header {
+.footer {
   background-color: makerGreen;
-  color: rgb(238, 236, 236);
-  padding: 1rem 0;
-  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  color: makerWhite;
 }
