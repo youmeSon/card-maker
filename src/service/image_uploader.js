@@ -1,4 +1,4 @@
-class ImagaUploader {
+class ImageUploader {
   async upload(file) {
     const data = new FormData();
     data.append("file", file);
@@ -14,4 +14,4 @@ class ImagaUploader {
   }
 }
 
-export default ImagaUploader;
+export default ImageUploader;

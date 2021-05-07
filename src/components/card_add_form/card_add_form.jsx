@@ -29,8 +29,8 @@ const CardAddForm = ({ FileInput, onAdd }) => {
       title: titleRef.current.value || "",
       email: emailRef.current.value || "",
       message: messageRef.current.value || "",
-      fileName: file.name,
-      fileURL: file.url,
+      fileName: file.fileName || "",
+      fileURL: file.fileURL || "",
     };
     formRef.current.reset();
     setFile({ fileName: null, fileURL: null });
