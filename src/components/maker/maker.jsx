@@ -8,7 +8,7 @@ import Preview from "../preview/preview";
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
   const history = useHistory();
-  const historyState = history?.location?.state;
+  const historyState = history?.location?.state; //*optional chaining* history가 있고 그.다.음 location이 있으면 state를 줘!
   const [cards, setCards] = useState({});
   const [userId, setUserId] = useState(historyState && historyState.id);
 
@@ -24,7 +24,8 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       setCards(cards);
     });
     return () => stopSync();
-  }, [userId]);
+  }, [userId, cardRepository]);
+
   useEffect(() => {
     authService.onAuthChange((user) => {
       if (user) {
@@ -33,7 +34,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         history.push("/");
       }
     });
-  });
+  }, [authService, userId, history]);
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
